@@ -37,7 +37,7 @@
               <EmptySpace min="-2" pref="108" max="-2" attributes="0"/>
               <Component id="adjacencyListButton" min="-2" pref="130" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="127" max="-2" attributes="0"/>
-              <Component id="jButton2" min="-2" pref="130" max="-2" attributes="0"/>
+              <Component id="AdjacencyMatrix" min="-2" pref="130" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="155" max="-2" attributes="0"/>
               <Component id="jButton3" min="-2" pref="130" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="163" max="-2" attributes="0"/>
@@ -58,7 +58,7 @@
               <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="adjacencyListButton" alignment="3" min="-2" pref="54" max="-2" attributes="0"/>
-                  <Component id="jButton2" alignment="3" min="-2" pref="54" max="-2" attributes="0"/>
+                  <Component id="AdjacencyMatrix" alignment="3" min="-2" pref="54" max="-2" attributes="0"/>
                   <Component id="jButton3" alignment="3" min="-2" pref="54" max="-2" attributes="0"/>
                   <Component id="jButton4" alignment="3" min="-2" pref="54" max="-2" attributes="0"/>
               </Group>
@@ -233,10 +233,13 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="adjacencyListButtonActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="jButton2">
+    <Component class="javax.swing.JButton" name="AdjacencyMatrix">
       <Properties>
-        <Property name="text" type="java.lang.String" value="jButton2"/>
+        <Property name="text" type="java.lang.String" value="Adjacency Matrix"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="AdjacencyMatrixActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="jButton3">
       <Properties>
