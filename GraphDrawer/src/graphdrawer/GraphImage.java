@@ -19,10 +19,12 @@ import javafx.util.Pair;
 public class GraphImage {
     int number ;    //number of vertices
     ArrayList<Pair<String,String>> edges;
+    private boolean IncMatrix[][];
     
     public GraphImage(int number ,ArrayList<Pair<String,String>> edges) {
         this.number = number;
         this.edges = edges;
+        IncMatrix = new boolean[number+1][edges.size()];
     }
     
     public VisualizationImageServer getGraphImageServer(){
@@ -33,8 +35,11 @@ public class GraphImage {
             graph.addVertex(Integer.toString(i+1));
         }
         
+        char c = 'a';
         for(int i=0 ; i<edges.size() ;++i){
-            graph.addEdge(Integer.toString(i+1), edges.get(i).getKey(), edges.get(i).getValue(), EdgeType.DIRECTED);
+            graph.addEdge(Character.toString(c), edges.get(i).getKey(), edges.get(i).getValue(), EdgeType.DIRECTED);
+            IncMatrix[Integer.parseInt(edges.get(i).getKey())][i] = true;
+            c++;
         }
         
         VisualizationImageServer vv =
@@ -42,19 +47,24 @@ public class GraphImage {
             new CircleLayout(graph), new Dimension(300, 300));
         
         vv.getRenderContext().setVertexLabelTransformer(new ToStringLabeller());
+        vv.getRenderContext().setEdgeLabelTransformer(new ToStringLabeller());
         
         return vv;
     }
     
-//   public static void main( String[ ] args ) {
-//        
-//        JFrame frame = new JFrame();
-//        frame.setSize(new Dimension(400,400));
-//        frame.setLocation(700,300);
-//        frame.getContentPane().add(vv);
-//        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-//        frame.setVisible(true);
-//        System.out.println(graph.toString());
-//        
-//   }
+    public String getIncMatric(){
+        String S = "Incidence Matrix :\n   ";  //Incidence Matrix
+        for(int i=0 ; i<edges.size() ;++i){
+                S+=Character.toString((char) ('a' +i))+" ";
+        }
+        S+="\n";
+        for(int i=1 ; i<number+1 ;++i){
+            S+=Integer.toString(i) +" ";
+            for(int j=0 ; j<edges.size() ;++j){
+                S+= IncMatrix[i][j] ? "1 " : "0 ";
+            }
+            S+="\n";
+        }
+        return S;
+    }
 }

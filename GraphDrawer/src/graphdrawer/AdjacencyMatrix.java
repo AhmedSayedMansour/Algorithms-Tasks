@@ -22,7 +22,8 @@ public class AdjacencyMatrix {
         adjMatrix[i][j] = true;
     }  
     public String toString() {
-        String s ="    ";
+        String s = "Adjacency Matrix :\n";
+        s +="    ";
         for (int i = 1; i < numVertices; i++) {
             s+=i + " ";
         }

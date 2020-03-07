@@ -18,6 +18,7 @@ import javax.swing.JOptionPane;
 public class GraphShower extends javax.swing.JFrame {
     int number;
     ArrayList<Pair<String ,String>> edges2;
+    GraphImage graphImage;
     /**
      * Creates new form GraphShower
      */
@@ -47,8 +48,8 @@ public class GraphShower extends javax.swing.JFrame {
         jScrollPane3 = new javax.swing.JScrollPane();
         graphInfo = new javax.swing.JTextArea();
         adjacencyListButton = new javax.swing.JButton();
-        AdjacencyMatrix = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
+        adjacencyMatrixButton = new javax.swing.JButton();
+        incidenceMatrixButton = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -147,14 +148,19 @@ public class GraphShower extends javax.swing.JFrame {
             }
         });
 
-        AdjacencyMatrix.setText("Adjacency Matrix");
-        AdjacencyMatrix.addActionListener(new java.awt.event.ActionListener() {
+        adjacencyMatrixButton.setText("Adjacency Matrix");
+        adjacencyMatrixButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                AdjacencyMatrixActionPerformed(evt);
+                adjacencyMatrixButtonActionPerformed(evt);
             }
         });
 
-        jButton3.setText("jButton3");
+        incidenceMatrixButton.setText("Incidence Matrix");
+        incidenceMatrixButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                incidenceMatrixButtonActionPerformed(evt);
+            }
+        });
 
         jButton4.setText("jButton4");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
@@ -179,9 +185,9 @@ public class GraphShower extends javax.swing.JFrame {
                 .addGap(108, 108, 108)
                 .addComponent(adjacencyListButton, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(127, 127, 127)
-                .addComponent(AdjacencyMatrix, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(adjacencyMatrixButton, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(155, 155, 155)
-                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(incidenceMatrixButton, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(163, 163, 163)
                 .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(150, Short.MAX_VALUE))
@@ -197,8 +203,8 @@ public class GraphShower extends javax.swing.JFrame {
                 .addGap(36, 36, 36)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(adjacencyListButton, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(AdjacencyMatrix, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(adjacencyMatrixButton, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(incidenceMatrixButton, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(61, Short.MAX_VALUE))
         );
@@ -218,7 +224,8 @@ public class GraphShower extends javax.swing.JFrame {
                 Pair<String, String> pair = new Pair<>(eachEdge[0],eachEdge[1]);
                 edges2.add(pair);
             }
-            VisualizationImageServer vs = new GraphImage(number,edges2).getGraphImageServer();
+            graphImage = new GraphImage(number,edges2);
+            VisualizationImageServer vs = graphImage.getGraphImageServer();
             graphScroller.add(vs);
         }
         else{
@@ -239,14 +246,19 @@ public class GraphShower extends javax.swing.JFrame {
         graphInfo.setText(adj.getFormattedList());
     }//GEN-LAST:event_adjacencyListButtonActionPerformed
 
-    private void AdjacencyMatrixActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AdjacencyMatrixActionPerformed
+    private void adjacencyMatrixButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_adjacencyMatrixButtonActionPerformed
         // TODO add your handling code here:
         AdjacencyMatrix adj = new AdjacencyMatrix(number);
         for(int i=0 ; i<edges2.size() ; i++){
             adj.addEdge(Integer.parseInt(edges2.get(i).getKey()),Integer.parseInt(edges2.get(i).getValue()) );
         }
         graphInfo.setText(adj.toString());
-    }//GEN-LAST:event_AdjacencyMatrixActionPerformed
+    }//GEN-LAST:event_adjacencyMatrixButtonActionPerformed
+
+    private void incidenceMatrixButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_incidenceMatrixButtonActionPerformed
+        // TODO add your handling code here:
+        graphInfo.setText(graphImage.getIncMatric());
+    }//GEN-LAST:event_incidenceMatrixButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -284,14 +296,14 @@ public class GraphShower extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton AdjacencyMatrix;
     private javax.swing.JButton adjacencyListButton;
+    private javax.swing.JButton adjacencyMatrixButton;
     private javax.swing.JTextArea edgesArea;
     private javax.swing.JPanel graph;
     private javax.swing.JTextArea graphInfo;
     private javax.swing.JScrollPane graphScroller;
+    private javax.swing.JButton incidenceMatrixButton;
     private javax.swing.JPanel inputs;
-    private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel3;
