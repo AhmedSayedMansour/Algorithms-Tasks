@@ -22,7 +22,7 @@ public class RepresentationMatrix {
         adjMatrix[i][j] += 1;
     }  
     public String toString() {
-        String s = "Adjacency Matrix :\n";
+        String s = "Representation Matrix :\n";
         s +="    ";
         for (int i = 1; i < numVertices; i++) {
             s+=i + " ";
