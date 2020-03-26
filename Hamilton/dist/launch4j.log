@@ -1,0 +1,32 @@
+
+
+Version:	3.12
+CmdLine:	D:\Programs\NetBeans\EulAndHam\dist\EulAndHam.exe --l4j-debug
+WOW64:		yes
+Working dir:	D:\Programs\NetBeans\EulAndHam\dist\.
+Java min ver:	
+Java max ver:	
+Bundled JRE:	D:\Programs\NetBeans\New folder\New folder\Hamilton\dist\lib\jdk-13
+Check launcher:	D:\Programs\NetBeans\New folder\New folder\Hamilton\dist\lib\jdk-13\bin\javaw.exe (OK)
+Main class:	myGraph
+Add classpath:	lib\collections-generic-4.01.jar
+Add classpath:	lib\colt-1.2.0.jar
+Add classpath:	lib\concurrent-1.3.4.jar
+Add classpath:	lib\j3d-core-1.3.1.jar
+Add classpath:	lib\jung-3d-2.0.1.jar
+Add classpath:	lib\jung-3d-demos-2.0.1.jar
+Add classpath:	lib\jung-algorithms-2.0.1.jar
+Add classpath:	lib\jung-api-2.0.1.jar
+Add classpath:	lib\jung-graph-impl-2.0.1.jar
+Add classpath:	lib\jung-io-2.0.1.jar
+Add classpath:	lib\jung-jai-2.0.1.jar
+Add classpath:	lib\jung-jai-samples-2.0.1.jar
+Add classpath:	lib\jung-samples-2.0.1.jar
+Add classpath:	lib\jung-visualization-2.0.1.jar
+Add classpath:	lib\stax-api-1.0.1.jar
+Add classpath:	lib\vecmath-1.3.1.jar
+Add classpath:	lib\wstx-asl-3.2.6.jar
+Launcher:	D:\Programs\NetBeans\New folder\New folder\Hamilton\dist\lib\jdk-13\bin\javaw.exe
+Launcher args:	-classpath "D:\Programs\NetBeans\EulAndHam\dist\EulAndHam.exe;lib\collections-generic-4.01.jar;lib\colt-1.2.0.jar;lib\concurrent-1.3.4.jar;lib\j3d-core-1.3.1.jar;lib\jung-3d-2.0.1.jar;lib\jung-3d-demos-2.0.1.jar;lib\jung-algorithms-2.0.1.jar;lib\jung-api-2.0.1.jar;lib\jung-graph-impl-2.0.1.jar;lib\jung-io-2.0.1.jar;lib\jung-jai-2.0.1.jar;lib\jung-jai-samples-2.0.1.jar;lib\jung-samples-2.0.1.jar;lib\jung-visualization-2.0.1.jar;lib\stax-api-1.0.1.jar;lib\vecmath-1.3.1.jar;lib\wstx-asl-3.2.6.jar" myGraph
+Args length:	507/32768 chars
+Exit code:	0
