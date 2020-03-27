@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="jung2-2_0_1">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../Graphics/jung2-2_0_1.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+    <jarDirectory url="jar://$PROJECT_DIR$/../../Graphics/jung2-2_0_1.zip!/" recursive="false" />
+  </library>
+</component>
