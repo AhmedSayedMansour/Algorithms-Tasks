@@ -8,7 +8,6 @@ package graphdrawer;
 import edu.uci.ics.jung.visualization.VisualizationImageServer;
 import java.util.ArrayList;
 import java.util.LinkedList;
-import javafx.util.Pair;
 import javax.swing.JOptionPane;
 
 /**
@@ -17,7 +16,7 @@ import javax.swing.JOptionPane;
  */
 public class GraphShower extends javax.swing.JFrame {
     int number;
-    ArrayList<Pair<String ,String>> edges2;
+    ArrayList<Pair> edges2;
     GraphImage graphImage;
     /**
      * Creates new form GraphShower
@@ -218,10 +217,10 @@ public class GraphShower extends javax.swing.JFrame {
         if( !edgesArea.getText().isEmpty() && !numberText.getText().isEmpty()){
             number = Integer.parseInt(numberText.getText());
             String []edges = edgesArea.getText().split("\n");
-            edges2 =new ArrayList<Pair<String ,String>>();
+            edges2 =new ArrayList<Pair>();
             for(int i=0 ; i < edges.length;++i){
                 String [] eachEdge = edges[i].split(" ");
-                Pair<String, String> pair = new Pair<>(eachEdge[0],eachEdge[1]);
+                Pair pair = new Pair(eachEdge[0],eachEdge[1]);
                 edges2.add(pair);
             }
             graphImage = new GraphImage(number,edges2);

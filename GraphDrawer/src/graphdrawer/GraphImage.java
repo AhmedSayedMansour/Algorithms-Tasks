@@ -14,14 +14,13 @@ import edu.uci.ics.jung.graph.util.EdgeType;
 import edu.uci.ics.jung.visualization.VisualizationImageServer;
 import edu.uci.ics.jung.visualization.decorators.ToStringLabeller;
 import java.util.ArrayList;
-import javafx.util.Pair;
 
 public class GraphImage {
     int number ;    //number of vertices
-    ArrayList<Pair<String,String>> edges;
+    ArrayList<Pair> edges;
     private boolean IncMatrix[][];
     
-    public GraphImage(int number ,ArrayList<Pair<String,String>> edges) {
+    public GraphImage(int number ,ArrayList<Pair> edges) {
         this.number = number;
         this.edges = edges;
         IncMatrix = new boolean[number+1][edges.size()];
