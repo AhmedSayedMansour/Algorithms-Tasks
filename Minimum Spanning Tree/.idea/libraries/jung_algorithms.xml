@@ -1,0 +1,28 @@
+<component name="libraryTable">
+  <library name="jung-algorithms">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../../Graphics/Jung/jung-algorithms-2.0.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../Graphics/Jung/jung-visualization-2.0.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../Graphics/Jung/jung-samples-2.0.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../Graphics/Jung/collections-generic-4.01.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../Graphics/Jung/jung-3d-2.0.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../Graphics/Jung/colt-1.2.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../Graphics/Jung/concurrent-1.3.4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../Graphics/Jung/jung-graph-impl-2.0.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../Graphics/Jung/jung-jai-samples-2.0.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../Graphics/Jung/jung-io-2.0.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../Graphics/Jung/jung-jai-2.0.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../Graphics/Jung/jung-api-2.0.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../Graphics/Jung/jung-3d-demos-2.0.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../Graphics/Jung/j3d-core-1.3.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../Graphics/Jung/vecmath-1.3.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../Graphics/Jung/stax-api-1.0.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../Graphics/Jung/wstx-asl-3.2.6.jar!/" />
+      <root url="file://$PROJECT_DIR$" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="file://$PROJECT_DIR$/src" />
+    </SOURCES>
+  </library>
+</component>
